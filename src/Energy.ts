@@ -1,3 +1,4 @@
+// Req 3
 export type EnergyType = 'mana' | 'stamina';
 
 interface Energy {
