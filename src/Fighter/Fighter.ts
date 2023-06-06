@@ -1,16 +1,16 @@
+// Req 8
 import Energy from '../Energy';
+import SimpleFighter from './SimpleFighter';
+// import SimpleFighter from './SimpleFighter';
 
 // Req 6
-interface Fighter {
-  lifePoints: number;
-  strength: number;
+interface Fighter extends SimpleFighter {
   defense: number;
   energy?: Energy;
 
-  attack(enemy: Fighter): void
   special?(enemy: Fighter): void
   levelUp(): void
-  receiveDamage(attackPoints: number): number
+  
 }
 
 export default Fighter;

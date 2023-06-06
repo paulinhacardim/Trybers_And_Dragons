@@ -3,6 +3,8 @@ import Energy from './Energy';
 import Fighter from './Fighter';
 import Race, { Elf } from './Races';
 import Archetype, { Mage } from './Archetypes';
+// Req 8
+import SimpleFighter from './Fighter/SimpleFighter';
 
 class Character implements Fighter {
   private _race: Race;
@@ -73,7 +75,7 @@ class Character implements Fighter {
     return this._lifePoints;
   }
 
-  attack(enemy: Fighter): void {
+  attack(enemy: SimpleFighter): void {
     enemy.receiveDamage(this.strength);
   }
 
